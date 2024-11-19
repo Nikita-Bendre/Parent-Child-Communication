@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ChildComponent } from "./child/child.component";
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'Parent2Child';
+export class AppComponent 
+{
+  public parentMessage = 'Hello from Parent';
+  public childData : any;  // Message from the child
+
+  
 }
